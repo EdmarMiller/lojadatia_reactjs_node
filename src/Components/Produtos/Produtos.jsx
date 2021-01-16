@@ -8,13 +8,13 @@ export default function Produtos() {
 
     useEffect(() => {
         async function fetchData() {
-            const resposta = await fetch("http://projetospessoais/LojaDaTia_React/src/api/index.php")
+            const resposta = await fetch("http://localhost:3001/")
             
             const dados = await resposta.json()
             setProdutos(dados);
         }
         fetchData();
-    }, []);
+    },[]);
 
     return (
        <Container>
